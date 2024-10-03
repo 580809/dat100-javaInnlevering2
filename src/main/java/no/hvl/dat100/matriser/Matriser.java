@@ -43,13 +43,12 @@ public class Matriser {
 		int lengde2 = matrise[0].length;
 		
 		int[][] nyMatrise = new int[lengde1][lengde2];
-		nyMatrise = matrise;
 		
 		for (int i = 0; i < lengde1; i++) {
 			
 			for (int j = 0; j < lengde2; j++) {
 				
-				nyMatrise[i][j] = matrise[i][j] * tall;
+				nyMatrise[i][j] = (matrise[i][j] * tall);
 				
 			}
 			
@@ -62,8 +61,32 @@ public class Matriser {
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
+		boolean matLik = true;
+		int lengde1a = a.length;
+		int lengde2a = a[0].length;
+		
+		int lengde1b = b.length;
+		int lengde2b = b[0].length;
+		
+		if (lengde1a != lengde1b || lengde2a != lengde2b) {
+			matLik = false;
+		}
+		
+		else {
+			for (int i = 0; i < lengde1a; i++) {
+			
+				for (int j = 0; j < lengde2a; j++) {
+				
+					if (a[i][j] != b[i][j]) {
+					
+						matLik = false;
+					}
+				}
+			}
+		
+		}
+			
+		return matLik;
 		
 	}
 	
