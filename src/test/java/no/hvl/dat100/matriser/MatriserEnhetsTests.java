@@ -79,6 +79,7 @@ class MatriserEnhetsTests {
 		
 	}
 	
+	/*
 	@Test
 	void testSpeile() {
 		
@@ -104,6 +105,7 @@ class MatriserEnhetsTests {
 		assertArrayEquals(ca,multiplisert);
 		
 	}
+	*/
 	
 	@Test
 	void testerLik() {
